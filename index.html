@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#C5FDFF">
+    <center>    <h1> Média de Notas Em JS </h1><br>
+    <font size="6">
+
+        <span id="NomeAluno"></span><br><br>
+        <span id="NomeProf"></span><br><br>
+        <span id="Nota1"></span><br><br>
+        <span id="Nota2"></span><br><br>
+        <span id="Nota3"></span><br><br>
+        <span id="media"></span><br><br>
+        <span id="retorno"></span><br><br>
+    </font></center>
+
+    <div id="retorno"></div>
+
+    <script>
+        let NomeAluno = prompt("Escreva o nome do aluno");
+        let NomeProf = prompt("Escreva o nome do professor");
+        let Nota1 = prompt("Digite a primeira nota do aluno");
+        let Nota2 = prompt("Digite a segunda nota do aluno");
+        let Nota3 = prompt("Digite a terceira nota do aluno");
+        let media = (parseInt(Nota1)+parseInt(Nota2)+parseInt(Nota3)) / 3;
+
+        if (media < 4){
+            retorno = "Aluno retido";
+        } else if (media <6){
+            retorno = "Aluno de recuperação";
+        } else if (media >6){
+            retorno = "Aluno aprovado";
+        }
+         
+        document.getElementById("NomeAluno").innerHTML = "o nome do aluno é:" + NomeAluno;
+        document.getElementById("NomeProf").innerHTML = "o nome do professor é: " + NomeProf;
+        document.getElementById("Nota1").innerHTML = "primeira nota: " + Nota1 ;
+        document.getElementById("Nota2").innerHTML = "segunda nota: " + Nota2 ;
+        document.getElementById("Nota3").innerHTML = "terceira nota: " + Nota3 ;
+        document.getElementById("media").innerHTML = "a média do aluno é: " + media;
+        document.getElementById("retorno").innerHTML = "a situação do aluno é: " + retorno
+        
+
+    </script>
+    
+</body>
+</html>
